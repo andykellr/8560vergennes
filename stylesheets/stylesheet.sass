@@ -3,7 +3,7 @@
  *by Jason Costello, @jsncostello
  *******************************************************************************
 
-@import url(pygment_trac.css)
+@import material-design-colors.scss
 
 /*******************************************************************************
  *MeyerWeb Reset
@@ -35,7 +35,7 @@ table
 body
   box-sizing: border-box
   color: #373737
-  background: #212121
+  background: $Yellow-50
   font-size: 16px
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif
   line-height: 1.5
@@ -210,47 +210,35 @@ form
   padding: 20px 10px
   margin: 0 auto
 
-#forkme_banner
-  display: block
-  position: absolute
-  top: 0
-  right: 0
-  z-index: 10
-  padding: 5px 33px 3px 10px
-  color: #ddd
-  background: url('../images/blacktocat.png') #444 no-repeat 95% 50%
-  background-size: 20px
-  font-weight: normal
-  line-height: 22px
-  font-size: 14px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-  border-bottom-left-radius: 2px
-  border-bottom-right-radius: 2px
+$header-top: $Green-600
+$header-bottom: $Green-700
+$header-shadow: $Green-900
 
 #header_wrap
-  background: #212121
-  background: -moz-linear-gradient(top, #373737, #212121)
-  background: -webkit-linear-gradient(top, #373737, #212121)
-  background: -ms-linear-gradient(top, #373737, #212121)
-  background: -o-linear-gradient(top, #373737, #212121)
-  background: linear-gradient(top, #373737, #212121)
+  background: $header-bottom
+  background: -moz-linear-gradient(top, $header-top, $header-bottom)
+  background: -webkit-linear-gradient(top, $header-top, $header-bottom)
+  background: -ms-linear-gradient(top, $header-top, $header-bottom)
+  background: -o-linear-gradient(top, $header-top, $header-bottom)
+  background: linear-gradient(top, $header-top, $header-bottom)
   .inner
-    padding: 50px 10px 30px 10px
+    padding: 50px 10px 50px 10px
 
 #project_title
   margin: 0
-  color: #fff
+  color: $Yellow-50
   font-size: 50px
   font-weight: 700
-  text-shadow: #111 0px 0px 10px
+  text-shadow: $header-shadow 0px 0px 10px
   margin-top: 20px
 
 #project_tagline
-  color: #ddd
+  color: #fff
   font-size: 24px
+  line-height: 30px
   font-weight: 300
   background: none
-  text-shadow: #111 0px 0px 10px
+  text-shadow: $header-shadow 0px 0px 10px
 
 #next_content_wrap
   background: #000
@@ -273,7 +261,7 @@ form
   padding-top: 40px
 
 #footer_wrap
-  background: #212121
+  background: $header-bottom
 
 /*******************************************************************************
  *Small Device Styles
@@ -308,46 +296,18 @@ form
 
 // ----------------------------------------------------------------------
 
-#logo
-  float: left
-  border: 0
-  text-shadow: none
-  box-shadow: none
-  vertical-align: middle
-  margin-left: -160px
-  margin-top: -11px
+.citystate
+  color: #eee
+  display: block
+  font-size: 20px
+  margin-top: -10px
 
 #project_footnote
   margin: 0
-  color: #aaa
+  color: #fff
   font-size: 18px
   font-weight: normal
-  text-shadow: #111 0px 0px 10px
-
-img.screenshot
-  box-shadow: none
-  border: none
-  margin: 0 auto
-  display: block
-  width: 90%
-  max-width: 589px
-p.screenshot
-
-img.dashboard
-  box-shadow: none
-  border: none
-  margin: 2em auto
-  padding: 25px
-  background: #000
-  width: 80%
-  display: block
-p.dashboard
-  background: #000
-
-.beta
-  color: #999
-  font-size: 14px
-  margin-left: 4px
+  text-shadow: $header-shadow 0px 0px 10px
 
 .warning
   border: 1px solid #9ac
@@ -359,20 +319,3 @@ p.dashboard
     font-weight: bold
 a
   color: #a33
-
-#download
-  padding-top: 2em
-  padding-bottom: 1em
-  a
-    color: #fff
-    background-color: #D7281B
-    display: inline-block
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
-    padding: 10px 40px
-    border-radius: 5px
-    &:hover
-      background-color: darken(#D7281B,5%)
-      text-decoration: none
-
-
-
