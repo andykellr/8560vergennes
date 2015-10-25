@@ -415,6 +415,7 @@ form {
 .summary div {
   margin-top: 1em; }
   .summary div b {
-    font-weight: bold; }
+    font-weight: bold;
+    color: rgb(188,170,164); }
 
 /*# sourceMappingURL=stylesheet.css.map */
