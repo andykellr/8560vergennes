@@ -1,0 +1,10 @@
+.*~
+\.DS_Store
+build
+target
+gh-pages
+.project
+.classpath
+.settings
+gwt-unitCache
+www-test
