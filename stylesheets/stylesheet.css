@@ -48,7 +48,7 @@ body {
   color: #373737;
   background: rgb(255,253,231);
   font-size: 16px;
-  font-family: "Myriad Pro", Calibri, Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; }
 
@@ -65,8 +65,7 @@ h1 {
 
 h2 {
   padding-bottom: 10px;
-  font-size: 32px;
-  background: url("../images/bg_hr.png") repeat-x bottom; }
+  font-size: 32px; }
 
 h3 {
   font-size: 24px; }
@@ -88,18 +87,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
-  text-shadow: none;
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease; }
+  color: rgb(245,127,23); }
   a:hover, a:focus {
     text-decoration: underline; }
 
@@ -112,19 +100,6 @@ em {
 
 strong {
   font-weight: bold; }
-
-img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb; }
 
 p img {
   display: inline;
@@ -215,35 +190,33 @@ form {
 
 .inner {
   position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
+  padding: 30px 10%;
   margin: 0 auto; }
 
-#header_wrap {
-  background: rgb(56,142,60);
-  background: -moz-linear-gradient(top, rgb(67,160,71), rgb(56,142,60));
-  background: -webkit-linear-gradient(top, rgb(67,160,71), rgb(56,142,60));
-  background: -ms-linear-gradient(top, rgb(67,160,71), rgb(56,142,60));
-  background: -o-linear-gradient(top, rgb(67,160,71), rgb(56,142,60));
-  background: linear-gradient(top, rgb(67,160,71), rgb(56,142,60)); }
-  #header_wrap .inner {
-    padding: 50px 10px 50px 10px; }
-
-#project_title {
-  margin: 0;
-  color: rgb(255,253,231);
-  font-size: 50px;
-  font-weight: 700;
-  text-shadow: rgb(27,94,32) 0px 0px 10px;
-  margin-top: 20px; }
+.wrap {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgb(109,76,65);
+  background: -moz-linear-gradient(top, rgb(141,110,99), rgb(109,76,65));
+  background: -webkit-linear-gradient(top, rgb(141,110,99), rgb(109,76,65));
+  background: -ms-linear-gradient(top, rgb(141,110,99), rgb(109,76,65));
+  background: -o-linear-gradient(top, rgb(141,110,99), rgb(109,76,65));
+  background: linear-gradient(top, rgb(141,110,99), rgb(109,76,65)); }
+  .wrap .inner {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5); }
 
 #project_tagline {
   color: #fff;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.25em;
   font-weight: 300;
   background: none;
-  text-shadow: rgb(27,94,32) 0px 0px 10px; }
+  text-shadow: rgb(93,64,55) 0px 0px 10px;
+  margin-top: 0; }
+  #project_tagline a {
+    color: #fff; }
 
 #next_content_wrap {
   background: #000;
@@ -266,7 +239,7 @@ form {
   padding-top: 40px; }
 
 #footer_wrap {
-  background: rgb(56,142,60); }
+  background: rgb(109,76,65); }
 
 /*******************************************************************************
  *Small Device Styles
@@ -307,18 +280,26 @@ form {
     min-width: 320px;
     max-width: 480px;
     font-size: 11px; } }
+#address {
+  margin: 0;
+  color: rgb(255,253,231);
+  font-size: 20px;
+  text-shadow: rgb(93,64,55) 0px 0px 3px;
+  line-height: 1.2em; }
+  #address a {
+    color: rgb(255,253,231); }
+
 .citystate {
   color: #eee;
   display: block;
-  font-size: 20px;
-  margin-top: -10px; }
+  font-size: 0.75em; }
 
 #project_footnote {
   margin: 0;
   color: #fff;
   font-size: 18px;
   font-weight: normal;
-  text-shadow: rgb(27,94,32) 0px 0px 10px; }
+  text-shadow: rgb(93,64,55) 0px 0px 10px; }
 
 .warning {
   border: 1px solid #9ac;
@@ -329,7 +310,111 @@ form {
   .warning b {
     font-weight: bold; }
 
-a {
-  color: #a33; }
+.container {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  width: 800px; }
+
+#carousel {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+  #carousel .viewport {
+    width: 710px;
+    height: 470px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: #000; }
+  #carousel .buttons {
+    position: absolute;
+    display: block;
+    padding: 0 18px;
+    width: 30px;
+    height: 470px;
+    text-indent: -2000px;
+    overflow: hidden;
+    background: no-repeat center center;
+    top: 0; }
+  #carousel .prev {
+    right: 100%;
+    background-image: url(../images/arrow-left.png); }
+  #carousel .next {
+    left: 100%;
+    background-image: url(../images/arrow-right.png); }
+  #carousel .disable {
+    opacity: 0.2; }
+  #carousel .overview {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+    #carousel .overview li {
+      float: left;
+      width: 710px;
+      height: 470px;
+      position: relative;
+      color: #fff; }
+    #carousel .overview img {
+      max-width: 710px;
+      max-height: 470px; }
+    #carousel .overview p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px;
+      padding: 18px;
+      margin: 0; }
+  #carousel .pager {
+    list-style: none;
+    clear: both;
+    padding: 0;
+    margin: 18px auto;
+    width: 710px; }
+    #carousel .pager li {
+      float: left;
+      margin: 5px 5px 0 0; }
+    #carousel .pager a {
+      border: 5px solid transparent; }
+    #carousel .pager a.active.pagenum {
+      border: 5px solid rgb(245,127,23); }
+  #carousel .pagenum {
+    border-radius: 2px;
+    display: block;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    text-align: center; }
+    #carousel .pagenum img {
+      margin-left: -10%;
+      height: 100%; }
+
+.dot {
+  color: rgb(188,170,164); }
+
+.carver {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.summary div {
+  margin-top: 1em; }
+  .summary div b {
+    font-weight: bold; }
 
 /*# sourceMappingURL=stylesheet.css.map */

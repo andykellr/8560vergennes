@@ -8,3 +8,4 @@ gh-pages
 .settings
 gwt-unitCache
 www-test
+.sass-cache
