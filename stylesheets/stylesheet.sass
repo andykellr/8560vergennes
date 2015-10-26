@@ -31,14 +31,23 @@ table
 /*******************************************************************************
  *Theme Styles
  *******************************************************************************
-
+	
+//Marisa colors
+	
+$clay: #534E49
+$putty: #F1EFE7
+$orange: #FF7737
+$dark-putty: darken($putty, 20%)
+	
+	
 body
   box-sizing: border-box
   color: #373737
-  background: $Yellow-50
+  background: #fff
   font-size: 18px
-  font-family: Helvetica, Arial, sans-serif
-  line-height: 1.5
+  font-family: 'Quicksand', sans-serif
+  line-height: 1.7
+  font-weight: 400
   -webkit-font-smoothing: antialiased
 
 h1, h2, h3, h4, h5, h6
@@ -74,9 +83,11 @@ footer p
 
 a
   text-decoration: none
-  color: $Yellow-900
+  color: $orange
+  line-height: 1.2em
   &:hover, &:focus
-    text-decoration: underline
+    text-decoration: none
+    color: darken($orange, 5%)
 
 footer a
   color: #F2F2F2
@@ -149,47 +160,47 @@ form
  *Full-Width Styles
  *******************************************************************************
 
+
+$header-top: $Brown-400
+$header-bottom: $Brown-600
+$header-shadow: $Brown-700
+
+$header-top: $Brown-400
+$header-bottom: $Brown-600
+$header-shadow: $Brown-700
+
 .outer
   width: 100%
 
 .inner
   position: relative
-  padding: 30px 10%
+  padding: 50px 10%
   margin: 0 auto
 
-$header-top: $Brown-400
-$header-bottom: $Brown-600
-$header-shadow: $Brown-700
-
-$header-top: $Brown-400
-$header-bottom: $Brown-600
-$header-shadow: $Brown-700
+header
+  .bar
+    display: block
+    border-top: 5px solid $Brown-400
+    margin-top: 5px
 
 .wrap
-  color: #fff
-  margin-top: 20px
+  color: $clay
   margin-bottom: 20px
-  background: $header-bottom
-  background: -moz-linear-gradient(top, $header-top, $header-bottom)
-  background: -webkit-linear-gradient(top, $header-top, $header-bottom)
-  background: -ms-linear-gradient(top, $header-top, $header-bottom)
-  background: -o-linear-gradient(top, $header-top, $header-bottom)
-  background: linear-gradient(top, $header-top, $header-bottom)
+
   .inner
     display: block
-    background-color: rgba(0,0,0,0.5)
 
 #project_tagline
-  color: #fff
-  font-size: 26px
-  line-height: 1.25em
+  color: $clay
+  font-size: 36px
+  line-height: 1.3em
   font-weight: 300
   background: none
-  text-shadow: $header-shadow 0px 0px 10px
-  margin-top: 0
+  margin-top: 20
   a
-    color: #fff
+    color: #777
 
+	
 #next_content_wrap
   background: #000
   border-top: 1px solid #111
@@ -201,6 +212,12 @@ $header-shadow: $Brown-700
 
 #next_content
   padding-top: 40px
+
+#carousel_wrap
+  background: $putty
+  padding-top: 48px
+  padding-bottom: 32px
+	
 
 #main_content_wrap
   background: #f2f2f2
@@ -240,18 +257,34 @@ $header-shadow: $Brown-700
 
 // ----------------------------------------------------------------------
 
+
+//Utils
+		
+.link 
+  line-height: 1.35em
+  border-bottom: 1px solid $orange
+  display: inline-block	
+  &:hover 
+    border-bottom-color: darken($orange, 5%)
+	
+	
+//Components
 #address
   margin: 0
-  color: $Yellow-50
-  font-size: 20px
-  text-shadow: $header-shadow 0px 0px 3px
-  a
-    color: $Yellow-50
-  line-height: 1.2em
-.citystate
-  color: #eee
-  display: block
-  font-size: 0.75em
+  color: #333
+  font-size: 1em
+  line-height: 1.5em
+  a.link
+    margin-top: 28px
+	
+a.hidden-link
+  color: $clay
+  border-bottom: 0px solid transparent
+  &:hover
+    color: $clay
+    text-decoration: none
+	
+
 
 #project_footnote
   margin: 0
@@ -271,6 +304,7 @@ $header-shadow: $Brown-700
 
 // ----------------------------------------------------------------------
 // carosel
+
 
 .container
   text-align: center
@@ -292,7 +326,7 @@ $header-shadow: $Brown-700
     position: relative
     border-radius: 3px
     margin: 0 auto
-    background-color: #000
+    background-color: #333
 
   .buttons
     position: absolute
@@ -374,7 +408,8 @@ $header-shadow: $Brown-700
       height: 100%
 
 .dot
-  color: $Brown-200
+  color: #555
+  font-weight: 700
 
 .carver
   clear: both
@@ -386,8 +421,17 @@ $header-shadow: $Brown-700
     display: table
     clear: both
 
-.summary div
-  margin-top: 1em
-  b
-    font-weight: bold
-    color: $Brown-200
+
+.summary 
+  .inner 
+    padding-top: 56px
+  div
+    margin-top: 1em
+  h3
+    font-weight: 700
+    font-size: 14px
+    color: darken($putty, 20%)
+    text-transform: uppercase
+    letter-spacing: 2px
+    margin-bottom: .3em
+    margin-top: 1.7em
