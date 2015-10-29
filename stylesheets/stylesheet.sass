@@ -169,6 +169,49 @@ $header-top: $Brown-400
 $header-bottom: $Brown-600
 $header-shadow: $Brown-700
 
+$image-width: 1024
+$image-width-px: 1024px
+$image-height: 682
+
+=carousel-dimensions($width, $height: ($width/$image-width)*$image-height)
+  .container
+    width: $width
+  #carousel
+    .viewport
+      width: $width
+      height: $height
+    .buttons
+      height: $height
+    .overview
+      li
+        width: $width
+        height: $height
+      img
+        max-width: $width
+        max-height: $height
+    .pager
+      width: $width
+    .buttons
+      width: ($width/$image-width-px)*30px
+      padding: 0 ($width/$image-width-px)*18px
+
+
++carousel-dimensions(710px)
+//@media screen and (min-width: 400px) and (max-width: 599px)
+  +carousel-dimensions(300px)
+//@media screen and (min-width: 600px) and (max-width: 799px)
+  +carousel-dimensions(500px)
+//@media screen and (min-width: 800px) and (max-width: 999px)
+  +carousel-dimensions(680px)
+//@media screen and (min-width: 1000px) and (max-width: 1199px)
+  +carousel-dimensions(860px)
+//@media screen and (min-width: 1200px) and (max-width: 1399px)
+  +carousel-dimensions(1110px)
+//@media screen and (min-width: 1400px)
+  +carousel-dimensions(1310px)
+//@media screen and (min-width: 1600px)
+  +carousel-dimensions(1500px)
+
 .outer
   width: 100%
 
@@ -310,7 +353,6 @@ a.hidden-link
   text-align: center
   margin: 0 auto
   position: relative
-  width: 800px
 
 #carousel
   margin-top: 36px
@@ -320,8 +362,6 @@ a.hidden-link
   margin-right: auto
 
   .viewport
-    width: 710px
-    height: 470px
     overflow: hidden
     position: relative
     border-radius: 3px
@@ -331,9 +371,6 @@ a.hidden-link
   .buttons
     position: absolute
     display: block
-    padding: 0 18px
-    width: 30px
-    height: 470px
     text-indent: -2000px
     overflow: hidden
     background: no-repeat center center
@@ -362,14 +399,9 @@ a.hidden-link
 
     li
       float: left
-      width: 710px
-      height: 470px
       position: relative
       color: #fff
 
-    img
-      max-width: 710px
-      max-height: 470px
     p
       position: absolute
       bottom: 0
@@ -385,7 +417,6 @@ a.hidden-link
     clear: both
     padding: 0
     margin: 18px auto
-    width: 710px
 
     li
       float: left
@@ -400,6 +431,8 @@ a.hidden-link
     display: block
     width: 56px
     height: 56px
+    width: 49px
+    height: 49px
     overflow: hidden
     text-align: center
 
@@ -435,3 +468,14 @@ a.hidden-link
     letter-spacing: 2px
     margin-bottom: .3em
     margin-top: 1.7em
+
+.year
+  font-weight: bold
+  font-size: 12px
+  display: inline-block
+  color: $dark-putty
+  margin-left: 10px
+  margin-top: -2px
+  vertical-align: middle
+  &.year1
+    margin-left: 0
