@@ -180,13 +180,13 @@
       </div>
       <div class="info">
         <h3>More Information</h3>
-        <a class="link" target="_blank" href="javascript:alert('coming soon')">Listing</a> <span class="dot">&middot;</span>
-        <a class="link" target="_blank" href="javascript:alert('coming soon')">Planomatic</a>
+        <a class="link" target="_blank" id="mls" href="javascript:alert('coming soon')">Listing</a> <span class="dot">&middot;</span>
+        <a class="link" target="_blank" id="pm" href="http://www.planomatic.com/58596">Planomatic</a>
       </div>
       <div class="carver">
         <h3>Norman F. Carver, Jr.</h3>
-        <a class="link" target="_blank" href="http://www.normancarver.com">Website</a> <span class="dot">&middot;</span>
-        <a class="link" target="_blank" href="http://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&text=Norman+F.+Carver&search-alias=books&field-author=Norman+F.+Carver&sort=relevancerank">Books</a>
+        <a class="link" target="_blank" id="ws" href="http://www.normancarver.com">Website</a> <span class="dot">&middot;</span>
+        <a class="link" target="_blank" id="bk" href="http://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&text=Norman+F.+Carver&search-alias=books&field-author=Norman+F.+Carver&sort=relevancerank">Books</a>
       </div>
     </div>
   </div>
@@ -219,6 +219,15 @@
 
       ga('create', 'UA-69256349-1', 'auto');
       ga('send', 'pageview');
+
+  function c(i,t) {
+    document.getElementById(i).onclick=function() { ga('send','event','button','click',t); }
+  }
+  c('mls','mls');
+  c('pm','planomatic');
+  c('bk','carverbooks');
+  c('ws','carversite');
+  
     </script>
 	  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
