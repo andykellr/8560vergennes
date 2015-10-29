@@ -173,7 +173,7 @@ $image-width: 1024
 $image-width-px: 1024px
 $image-height: 682
 
-=carousel-dimensions($width, $height: ($width/$image-width)*$image-height)
+=carousel-dimensions($width, $height: round(($width/$image-width)*$image-height))
   .container
     width: $width
   #carousel
@@ -195,22 +195,11 @@ $image-height: 682
       width: ($width/$image-width-px)*30px
       padding: 0 ($width/$image-width-px)*18px
 
-
 +carousel-dimensions(710px)
-//@media screen and (min-width: 400px) and (max-width: 599px)
-  +carousel-dimensions(300px)
-//@media screen and (min-width: 600px) and (max-width: 799px)
-  +carousel-dimensions(500px)
-//@media screen and (min-width: 800px) and (max-width: 999px)
-  +carousel-dimensions(680px)
-//@media screen and (min-width: 1000px) and (max-width: 1199px)
-  +carousel-dimensions(860px)
-//@media screen and (min-width: 1200px) and (max-width: 1399px)
-  +carousel-dimensions(1110px)
-//@media screen and (min-width: 1400px)
-  +carousel-dimensions(1310px)
-//@media screen and (min-width: 1600px)
-  +carousel-dimensions(1500px)
+@media screen and (max-width: 799px)
+  +carousel-dimensions(513px)
+@media screen and (min-width: 1200px)
+  +carousel-dimensions(1024px)
 
 .outer
   width: 100%
